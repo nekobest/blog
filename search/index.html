@@ -39,8 +39,8 @@
     
     
     <title>
-          
-            Nekobest&#39;s Blog
+        
+            Search | Nekobest&#39;s Blog
         
     </title>
     
@@ -177,54 +177,18 @@
   </v-col>
 </v-row>
 
-                            <v-card class="elevation-2 index-card">
-  
-    <article class="index-article">
-      
-      <div class="index-article-header">
-        <v-row no-gutters>
-          <v-col cols="auto">
-            <div class="index-article-header-date font-weight-medium">
-              2021-02-05
-            </div>
-          </v-col>
-          <v-spacer></v-spacer>
-          <v-col cols="auto">
-            
-              <v-card flat color="secondary" tile class="index-article-header-tag  font-weight-medium">
-                
-                  <span class="index-article-header-tag-content">
-                    <v-icon>fas fa-tag</v-icon>
-                    <a rel="tag" href = /tags/%E5%AF%B9%E8%B1%A1/ >对象</a>
-                  </span>
-                
-              </v-card>
-            
-          </v-col>
-        </v-row>
-        <span>
-          
-            <a class="index-article-header-category font-weight-bold" href="/categories/Python/">Python></a>
-           
-        </span> 
-        <a class="index-article-header-title font-weight-medium" href="/object/">面向对象</a>
-      </div>
-      
-      <div class="index-article-content">
+                            <v-card class="elevation-2 post-card">
+    <div class="post-header">
+        <a class="post-header-title font-weight-medium" href="/search/index.html">搜索</a>
+    </div>
+    <div class="post-content typo">
         
-          特征：继承（基类、派生类）、多态（可以对不同类型的对象进行相同的操作）、封装性
+            <v-text-field label="Search" v-model="searchPageValue" prepend-icon="search" clearable clear-icon="clear" @keydown.enter="EnterSearch(searchPageValue,true)"></v-text-field>
+            <v-card class="elevation-0" id="search-result"></v-card>
         
-      </div>
-      
-      <div class="index-article-readmore ">
-        <v-btn text href="/object/">阅读更多</v-btn>
-      </div>
-      <v-divider></v-divider>
-    </article> 
-   
-</v-card>  
-
-         
+    </div>
+</v-card>
+        
                             <div id="mobile-footer" class="d-block d-md-none">
                                 <v-divider></v-divider>
                                 <div id="mobile-footer-content">
